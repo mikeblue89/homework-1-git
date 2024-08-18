@@ -8,7 +8,7 @@ jobs:
     environment: testing
     env:
       CUSTOM_SECRET: ${{ secrets.CUSTOM_SECRET }}
-      ENV_VAR: ${{ env.API_KEY }}
+      ENV_VAR: ${{ secrets.API_KEY }}
     runs-on: ubuntu-latest
     steps:
       - name: Output information
