@@ -8,11 +8,10 @@ jobs:
     environment: testing
     env:
       CUSTOM_SECRET: ${{ secrets.CUSTOM_SECRET }}
-      ENV_VAR: ${{ secrets.API_KEY }}
     runs-on: ubuntu-latest
     steps:
       - name: Output information
         run: |
-          echo "ENVIROMENT_VARIABLE: $ENV_VAR"
+          echo "ENVIROMENT_VARIABLE: ${{ env.ENV_VAR }}"
           echo "SECRET: $CUSTOM_SECRET"
           
